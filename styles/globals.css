@@ -38,6 +38,12 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+  --d: 3000ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgba(168, 239, 255, 1);
+	--c2: rgba(168, 239, 255, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -83,6 +89,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -93,6 +100,9 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+li {
+  list-style-type: none;
 }
 
 a {
@@ -105,3 +115,94 @@ a {
     color-scheme: dark;
   }
 }
+
+.commonWidth {
+  width: min(90%, 1435px);
+  margin: 0 auto;
+}
+.styloria_header_main {
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+.navMainWrpr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.navMenus {
+  width: 42%;
+}
+.searchFields {
+  width: 20%;
+  position: relative;
+}
+.navMenuMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 19px 0; */
+}
+.navMenuMain li {
+  text-transform: uppercase;
+  color: #6c5c37;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  padding: 16px 0;
+}
+.navMenuMain li.active,
+.navMenuMain li:hover {
+  color: #ffb012;
+}
+.navMenuMain li::after {
+  content: "";
+  position: absolute;
+  background: rgb(11, 10, 7);
+  background: linear-gradient(
+    180deg,
+    rgba(11, 10, 7, 1) 1%,
+    rgba(46, 40, 28, 1) 50%,
+    rgba(11, 10, 7, 1) 100%
+  );
+  width: 1px;
+  height: 100%;
+  right: -18px;
+  top: 0px;
+}
+.navMenuMain li:last-child::after {
+  content: none;
+}
+.searchFields .css-1orzy9s {
+  border-radius: 0px;
+}
+.searchFields .css-1iz4iln {
+  right: 0;
+  top: 0;
+}
+.searchFields .MuiSvgIcon-root {
+  color: #c1a367;
+}
+.navMainWrpr::after {
+  content: "";
+  position: absolute;
+  background: rgb(11,10,7);
+  background: linear-gradient(90deg, rgba(11,10,7,1) 1%, rgba(180,150,98,1) 30%, rgba(180,150,98,1) 70%, rgba(11,10,7,1) 100%);
+  width: 100%;
+  height: 1px;
+  right: -18px;
+  bottom: 28px;
+}
+.styloria_logo {
+  position: relative;
+  top: 46px;
+}
+.styloria_logo img {
+  display: block;
+  max-width: 100%;
+}
+
+
+

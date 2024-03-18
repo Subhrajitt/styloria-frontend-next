@@ -1,0 +1,54 @@
+.home_mainWrpr {
+    overflow: hidden;
+    position: relative;
+    padding-top: 112px;
+    margin-top: -24px;
+    height: 100vh;
+}
+.home_subWrpr {
+    background: url(../../public/assest/women_img_styloria.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+    padding: 200px 0 0;
+    height: 100%;
+
+}
+.home_textWrpr {
+    padding-top: 60px;
+}
+.home_textWrpr h2{
+font-size: 45px;
+font-weight: 600;
+color: #bb9d61;
+}
+.home_textWrpr h2 span{
+    color: #ffb012;
+}
+.home_textWrpr a {
+    font-size: 30px;
+    font-weight: 400;
+    color: #bb9d61;
+}
+
+.home_contentWrpr button {
+    background: rgb(49,49,49);
+background: linear-gradient(180deg, rgba(49,49,49,1) 1%, rgba(27,27,27,1) 50%, rgba(2,2,2,1) 100%);
+color: #bb9d61;
+text-transform: uppercase;
+font-size: 18px;
+font-weight: 600;
+border-radius: 50px;
+padding: 16px 30px;
+width: 15.8%;
+margin-top: 30px;
+border: 1px solid #33322e;
+
+
+}
+
+
+
+
+
+
