@@ -5,6 +5,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import SearchIcon from "@mui/icons-material/Search";
 import { InputBase, alpha, styled } from "@mui/material";
+import youtube from "../../public/assest/youtube_styloria.png";
+import facebook from "../../public/assest/facebook_logo_styloria.png"
+import twitter from "../../public/assest/x_logo_styloria.png"
+import linkedin from "../../public/assest/linkedIn_logo_styloria.png"
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -64,38 +68,53 @@ const Navbar = () => {
     <>
       <div className="styloria_header_main">
         <div className="commonWidth">
-          <div className="navMainWrpr">
-            <div className="styloria_logo">
-              <div className="styloria_logo_wrpr">
-                <Image src={stylorialogo} alt="" />
+          <div className="navTopWrpr">
+            <div className="navMainWrpr">
+              <div className="styloria_logo">
+                <div className="styloria_logo_wrpr">
+                  <Image src={stylorialogo} alt="" />
+                </div>
+              </div>
+              <div className={`navMenus ${anchorEl ? "showDiv" : ""}`}>
+                <ul className="navMenuMain">
+                  <li className={`menus ${pathname === "/" ? "active" : ""}`}>
+                    <Link href="/" onClick={() => router.push("/")}>
+                      Home
+                    </Link>
+                  </li>
+                  <li>About Us</li>
+                  <li>Services</li>
+                  <li>Offers</li>
+                  <li>Blogs</li>
+                  <li>Contact Us</li>
+                </ul>
+              </div>
+              <div className="searchFields">
+                <Search>
+                  <StyledInputBase
+                    placeholder=""
+                    inputProps={{ "aria-label": "search" }}
+                  />
+
+                  <SearchIconWrapper>
+                    <SearchIcon />
+                  </SearchIconWrapper>
+                </Search>
               </div>
             </div>
-            <div className={`navMenus ${anchorEl ? "showDiv" : ""}`}>
-              <ul className="navMenuMain">
-                <li className={`menus ${pathname === "/" ? "active" : ""}`}>
-                  {" "}
-                  <Link href="/" onClick={() => router.push("/")}>
-                    Home
-                  </Link>
-                </li>
-                <li>About Us</li>
-                <li>Services</li>
-                <li>Offers</li>
-                <li>Blogs</li>
-                <li>Contact Us</li>
-              </ul>
-            </div>
-            <div className="searchFields">
-              <Search>
-                <StyledInputBase
-                  placeholder=""
-                  inputProps={{ "aria-label": "search" }}
-                />
-
-                <SearchIconWrapper>
-                  <SearchIcon />
-                </SearchIconWrapper>
-              </Search>
+            <div className="socialMedia_logo">
+              <Link href="https://www.youtube.com/" target="_blank">
+                <Image src={youtube} alt="" />
+              </Link>
+              <Link href="https://www.facebook.com/" target="_blank">
+                <Image src={facebook} alt="" />
+              </Link>{" "}
+              <Link href="https://twitter.com" target="_blank">
+                <Image src={twitter} alt="" />
+              </Link>{" "}
+              <Link href="https://www.linkedin.com/" target="_blank">
+                <Image src={linkedin} alt="" />
+              </Link>
             </div>
           </div>
         </div>
