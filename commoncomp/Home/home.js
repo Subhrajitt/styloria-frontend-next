@@ -19,10 +19,13 @@ const Home = () => {
                 </h2>
                 <Link href="tel:+1 (905) 497-2489">+1 (905) 497-2489</Link>
               </div>
-              <div>
+              <div className={styles.buttonWrpr}>
                 <Button>Book Now</Button>
               </div>
             </div>
+          </div>
+          <div className={styles.btmText}>
+            <h1>The Styloria Hair & Beauty Studio</h1>
           </div>
         </div>
       </div>
